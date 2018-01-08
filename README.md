@@ -2,3 +2,5 @@
 T systems - farma testing
 
 project content:
+
+Teraz som urobil zmenu
