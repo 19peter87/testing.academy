@@ -3,10 +3,9 @@
 myslim_na=linux
 
 
-dialog --title "Hadaj na co myslim" --inputbox "Zadaj svoj typ:" 8 30 "       " 2> /tmp/name
 
+dialog --infobox "Hadaj na co myslim
 
-dialog --hadaj na co myslim 5 20
 read  tip
 while [ "$tip" != "$myslim_na" ]
 do
