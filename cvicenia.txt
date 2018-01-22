@@ -1,0 +1,19 @@
+
+Cvicenia
+
+22.januara
+Uloha 1
+
+
+Uloha 2
+
+Zoradte vsetky filmy do jedneho riadku a oddelte ich bodkociarkou.
+cat movies.csv | sed 's/\r/;/g' | sed 's/\n//g' | sed -e "1d" | head -10 | xargs
+
+Testing
+
+Uloha3
+
+
+Test ci mi urobilo priecinok a ci sa v priecinku nieco nachadza
+mkdir xxx && [[ -d "xxx" ]] && [[ $(ls -a xxx | wc -l) -eq 2 ]]  || echo "to nezrobilo" 1>&2
