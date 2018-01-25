@@ -10,10 +10,82 @@ Uloha 2
 Zoradte vsetky filmy do jedneho riadku a oddelte ich bodkociarkou.
 cat movies.csv | sed 's/\r/;/g' | sed 's/\n//g' | sed -e "1d" | head -10 | xargs
 
+
+
 Testing
 
 Uloha3
 
 
-Test ci mi urobilo priecinok a ci sa v priecinku nieco nachadza
-mkdir xxx && [[ -d "xxx" ]] && [[ $(ls -a xxx | wc -l) -eq 2 ]]  || echo "to nezrobilo" 1>&2
+23.1.2018
+
+
+1. ak zadam priecinok, tak je vytvoreny
+
+@test "when new folder with existing name is going to be created then error     message is shown" {
+    
+    # setup
+    DIR=dirx
+    mkdir ${DIR}
+ 
+    [[ $(mkdir ${DIR} 2>&1) = "mkdir: cannot create directory ‘${DIR}’: File exists" ]]
+ 
+    # teardown
+    rmdir ${DIR}
+}
+
+
+
+2. ak zadam priecinok kt. uz existuje, tak vypise chybu
+
+@test "when i create new folder then folder is created" {
+ 
+    # setup
+    DIR=diry
+    mkdir ${DIR}
+
+    [[ -d ${DIR} ]] # test if new folder exitsts
+ 
+    # teardown
+    rmdir ${DIR}
+}
+
+
+
+3. ak zadam cestu kt. neexistuje, tak chyba
+
+
+
+
+4. ak zadam viac priecinkov, tak
+
+
+
+
+5. ak nezadam nazov priecinku, tak chyba
+
+@test "when i dont say name then report" {
+    # setup
+
+    mkdir || [[ $(mkdir ${DIR} 2>&1) = "mkdir: missing operand
+    Try 'mkdir --help' for more information." ]] # test, if no read 
+}
+
+6. ak su v nazve nepovolene znaky, tak chyba
+
+
+
+
+7. ak je priecinok vytvoreny, ma prislusne prava
+
+8. ak je priecinok vytvoreny, tak je prazdny
+
+9. ak zadam neexistujuci prepinac, tak chyba
+
+10. ak zadam privelky pocet vstupnych parametrov, tak?
+
+11. ak sa pokusim vytvorit priecinok v 
+
+12. ak bude mat nazov privelky pocet znakov
+
+
