@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
-MKDIR=taktak
+echo -e "{
+\"id\": 1,
+\"title\": \"Toy Story\",
+\"year\": 1995,
+}"
 
-mkdir $MKDIR
+
+
