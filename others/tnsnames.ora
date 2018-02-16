@@ -1,0 +1,8 @@
+chinook = (DESCRIPTION=
+        (ADDRESS=
+            (PROTOCOL=TCP)
+            (Host=oracle.kpi.fei.tuke.sk)
+            (Port=1521)
+        )
+        (CONNECT_DATA=(SID=db11g))
+)

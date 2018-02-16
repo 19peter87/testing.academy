@@ -1,0 +1,16 @@
+{
+  "name":"Peter",
+  "surname":"Stanislavsky",
+  "adress": "Vranov nad Toplou",
+  "age":"30",
+  "familly": {
+   "mother": "Marta",
+   "father": "Peter",
+   "brother": "Tomas"
+  },
+  "Place of birth": "Vranov nad Toplou"
+}
+
+
+
+

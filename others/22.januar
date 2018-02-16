@@ -1,0 +1,8 @@
+Cvicenia
+
+
+Uloha1
+
+Vytiahnite zo stranky len aktualnu teplotu:
+
+curl -s "http://api.openweathermap.org/data/2.5/weather?units=metric&APPID=3718d7f90e7b081ca8f46aa4305c05ea&q=Kosice" | json_reformat | egrep "(temp)" | awk '{print $2}' | head -1 | tr -d ,
